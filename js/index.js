@@ -79,14 +79,14 @@ button.addEventListener('dblclick', event => {
 
 // prevent event propagation
 
+
+let child = document.querySelector('.content-destination h2')
+child.addEventListener('click', event => {
+    event.stopImmediatePropagation()
+    event.target.style.color = 'blue';
+})
 let parent = document.querySelector('.content-destination')
 parent.addEventListener('click', event => {
     event.target.style.color = 'green';
-    child.addEventListener('click', event => {
-        event.stopPropagation()
-    })
-
 })
-let child = document.querySelector('content-destination h2')
-
 
