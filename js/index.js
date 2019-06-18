@@ -44,7 +44,7 @@ window.addEventListener('load', (event) => {
 })
 
 //Event Listener #7 click
-let containHome = document.querySelector('.inverse-content .text-content')
+let containHome = document.querySelector('.inverse-content .text-content p')
 containHome.addEventListener('click', event => {
     event.target.style.backgroundColor = 'yellow'
 })
@@ -77,5 +77,16 @@ button.addEventListener('dblclick', event => {
     event.target.style.color = 'purple'
 })
 
+// prevent event propagation
+
+let parent = document.querySelector('.content-destination')
+parent.addEventListener('click', event => {
+    event.target.style.color = 'green';
+    child.addEventListener('click', event => {
+        event.stopPropagation()
+    })
+
+})
+let child = document.querySelector('content-destination h2')
 
 
