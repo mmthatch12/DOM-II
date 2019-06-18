@@ -64,4 +64,9 @@ whereToPaste.addEventListener('paste', event => {
     event.preventDefault()
 })
 
-//Event Listener #9
+//Event Listener #9 auxclick
+let theNav = document.querySelector('.nav')
+theNav.addEventListener('auxclick', event => {
+    event.preventDefault()
+    event.target.style.color = 'yellow'
+})
