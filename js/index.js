@@ -38,4 +38,16 @@ tcHeaders.addEventListener('contextmenu', event => {
     event.preventDefault()
 })
 
+//Event listener #6 load
+window.addEventListener('load', (event) => {
+    console.log('page is now loaded')
+})
 
+//Event Listener #7 click
+let containHome = document.querySelector('.home')
+containHome.addEventListener('click', event => {
+    event.target.style.backgroundColor = 'yellow'
+})
+
+
+//Event Listener #8 
