@@ -31,5 +31,11 @@ function zoom(event) {
 let scale = 1;
 busImg[1].onwheel = zoom;
 
-//Event listener #5 Keydown
-let 
+//Event listener contextmenu #5 
+let tcHeaders = document.querySelector('.content-destination h2')
+console.log(tcHeaders)
+tcHeaders.addEventListener('contextmenu', event => {
+    event.preventDefault()
+})
+
+
