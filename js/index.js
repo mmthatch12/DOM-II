@@ -44,7 +44,7 @@ window.addEventListener('load', (event) => {
 })
 
 //Event Listener #7 click
-let containHome = document.querySelector('.home')
+let containHome = document.querySelector('.inverse-content .text-content')
 containHome.addEventListener('click', event => {
     event.target.style.backgroundColor = 'yellow'
 })
@@ -70,3 +70,12 @@ theNav.addEventListener('auxclick', event => {
     event.preventDefault()
     event.target.style.color = 'yellow'
 })
+
+//Event Listener #10 another dblclick
+let button = document.querySelector('.btn')
+button.addEventListener('dblclick', event => {
+    event.target.style.color = 'purple'
+})
+
+
+
