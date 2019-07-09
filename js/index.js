@@ -77,6 +77,17 @@ button.addEventListener('dblclick', event => {
     event.target.style.color = 'purple'
 })
 
+//mousemove event
+function shME(event){
+    const xcord = document.querySelector('.xcord')
+    const ycord = document.querySelector('.ycord')
+    xcord.textContent = event.clientX
+    ycord.textContent = event.clientY
+}
+
+document.body.addEventListener('mousemove', event => {shME(event)
+})
+
 // prevent event propagation
 
 
