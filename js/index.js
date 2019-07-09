@@ -77,16 +77,31 @@ button.addEventListener('dblclick', event => {
     event.target.style.color = 'purple'
 })
 
+//mousemove event
+function shME(event){
+    const xcord = document.querySelector('.xcord')
+    const ycord = document.querySelector('.ycord')
+    xcord.textContent = event.clientX
+    ycord.textContent = event.clientY
+}
+
+document.body.addEventListener('mousemove', event => {shME(event)
+})
+
 // prevent event propagation
 
+let propa = document.querySelector('.intro h2')
+let heada = document.querySelector('header')
 
-let child = document.querySelector('.content-destination h2')
-child.addEventListener('click', event => {
-    event.stopImmediatePropagation()
-    event.target.style.color = 'blue';
-})
-let parent = document.querySelector('.content-destination')
-parent.addEventListener('click', event => {
-    event.target.style.color = 'green';
+theNav.addEventListener('click', event => {
+    if (event.target.tagName ==='A') {
+        const titleText = event.target.textContent
+        propa.textContent = titleText
+        event.stopPropagation()
+    }
 })
 
+heada.addEventListener('click', event => {
+    propa.textContent = 'Header Clicked'
+    event.stopPropagation()
+})

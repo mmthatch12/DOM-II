@@ -179,7 +179,6 @@ img {
   height: 90px;
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
-  position: fixed;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -292,6 +291,27 @@ img {
   .home .inverse-content .img-content {
     order: 2;
   }
+}
+.home .bugbox {
+  position: fixed;
+  top: 0;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 2px dashed red;
+  color: red;
+  font-weight: 900;
+  padding: 1.2rem;
+  opacity: 0.8;
+}
+.home .bugbox > .small {
+  width: 60px;
+}
+.home .bugbox > div {
+  overflow: hidden;
 }
 .home .content-destination {
   width: 75%;
